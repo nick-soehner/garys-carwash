@@ -1,0 +1,498 @@
+:root {
+    --red: #ff0000;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+.red {
+    color: red;
+}
+
+/* =============== HEADER =============== */
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    min-height: 64px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+    width: 15em;
+    padding: 30px;
+}
+
+#nav {
+    width: 400px;
+}
+
+#nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    flex-wrap: wrap;
+}
+
+#nav li {
+    font-size: 1em;
+    font-weight: 500;
+    margin: 10px;
+}
+
+#nav a {
+    text-decoration: none;
+    color: black;
+    transition: all ease 250ms;
+}
+
+#nav a:hover {
+    color: red;
+    transition: all ease 250ms;
+}
+
+#menu-bar {
+    width: 25px;
+    display: none;
+    cursor: pointer;
+    transition: all ease 250ms;
+}
+
+#menu-bar:hover {
+    filter: invert(12%) sepia(75%) saturate(7395%) hue-rotate(3deg)
+        brightness(100%) contrast(116%);
+    transition: all ease 250ms;
+}
+
+#mobile-nav {
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#mobile-nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    list-style: none;
+    height: 400px;
+}
+
+#mobile-nav a {
+    text-decoration: none;
+    color: black;
+    transition: all ease 250ms;
+}
+
+#mobile-nav a:hover {
+    color: red;
+    transition: all ease 250ms;
+}
+
+#X {
+    color: black;
+    transition: all ease 250ms;
+    cursor: pointer;
+}
+
+#X:hover {
+    color: red;
+    transition: all ease 250ms;
+}
+
+/* =============== LANDING =============== */
+
+#landing {
+    min-height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.425);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.background-img {
+    position: fixed;
+    min-width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+.landing-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    height: auto;
+    margin: 50px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 1px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.wrapper {
+    width: 70%;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.wash-wrapper {
+    width: 80%;
+    min-height: 40vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.two {
+    min-height: 100%;
+    width: 400px;
+    padding: 2em 0;
+    text-align: center;
+}
+
+.main-section {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.underline {
+    width: 40%;
+    border-radius: 10px;
+    height: 2px;
+    background-color: red;
+    margin: 10px 0;
+}
+
+/* =============== LOCATIONS =============== */
+
+.wrapper-location {
+    width: 85%;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+.carwash-name {
+    margin-bottom: 10px;
+}
+
+.carwash-box {
+    width: 100%;
+    margin-bottom: 50px;
+    border-top: 1px solid black;
+    padding: 20px;
+}
+
+.carwash-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.info-box {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.carwash-photo {
+    width: 25em;
+    height: auto;
+    padding: 25px;
+}
+
+.map {
+    width: 30em;
+    height: 20em;
+}
+
+iframe {
+    border: 1px solid black;
+}
+
+/* =============== ABOUT =============== */
+
+.about-box {
+    width: 100%;
+    margin-bottom: 50px;
+    border-top: 1px solid black;
+    padding: 20px;
+    text-align: left;
+}
+
+.about-name {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.about-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.gary {
+    width: 25em;
+    height: auto;
+    margin-left: 20px;
+}
+
+/* =============== REPORT =============== */
+
+.report-box {
+    width: 100%;
+    margin-bottom: 50px;
+    border-top: 1px solid black;
+    padding: 20px;
+    text-align: left;
+}
+
+.report-name {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.report-text {
+    text-align: center;
+}
+
+.alert {
+    color: red;
+}
+
+.form-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.form-title {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.cash-form {
+    width: 400px;
+    min-height: 600px;
+    box-shadow: 0 0 10px 2px rgb(170, 170, 170);
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#cash-refund {
+    height: 100%;
+    width: 80%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.credit-form {
+    width: 400px;
+    min-height: 600px;
+    box-shadow: 0 0 10px 2px rgb(170, 170, 170);
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#credit-refund {
+    height: 100%;
+    width: 80%;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+input {
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+select {
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+.submit-btn {
+    margin: 30px 0;
+    width: 150px;
+    height: 50px;
+    border: 1px solid red;
+    color: red;
+    border-radius: 50px;
+    background-color: transparent;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.submit-btn:hover {
+    background-color: red;
+    border: 1px solid white;
+    color: white;
+}
+
+
+
+/* =============== LOADER =============== */
+
+#loader {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+    margin: 5px;
+}
+
+.dot-one {
+    animation: scale 2s infinite ease-in-out;
+}
+
+.dot-two {
+    animation: scale 2s infinite ease-in-out 500ms;
+}
+
+.dot-three {
+    animation: scale 2s infinite ease-in-out 1000ms;
+}
+
+.dot-four {
+    animation: scale 2s infinite ease-in-out 1500ms;
+}
+
+@keyframes scale {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    #nav {
+        display: none;
+    }
+
+    #menu-bar {
+        display: block;
+    }
+
+    .box {
+        width: 90%;
+    }
+
+    .wash-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .gary {
+        width: 15em;
+        margin-top: 20px;
+        margin-left: 0;
+    }
+
+    .carwash-photo {
+        width: 20em;
+    }
+}

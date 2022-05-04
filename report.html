@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gary's Carwash | Report an Issue</title>
+    <link rel="icon" href="./img/favicon.png">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <script src="./jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <div id="loader">
+        <div class="circle dot-one"></div>
+        <div class="circle dot-two"></div>
+        <div class="circle dot-three"></div>
+        <div class="circle dot-four"></div>
+    </div>
+
+    <section id="landing">
+        <img class="background-img" src="./img/background.jpg" alt="">
+
+        <!-- MOBILE NAV -->
+
+        <nav id="mobile-nav" style="display: none;">
+            <h1 id="X">X</h1>
+            <ul>
+                <a href="./index.html">
+                    <li>Home</li>
+                </a>
+                <a href="./locations.html">
+                    <li>Locations</li>
+                </a>
+                
+                <a href="./report.html">
+                    <li>Report an Issue</li>
+                </a>
+            </ul>
+        </nav>
+
+        <!-- MAIN SECTION -->
+
+        <div class="box">
+            <div class="wrapper-location">
+                <div class="main-section">
+                    <a href="./index.html">
+                        <img src="./img/logo.png" alt="logo" class="logo">
+                    </a>
+                    <nav id="nav">
+                        <ul>
+                            <a href="./index.html">
+                                <li>Home</li>
+                            </a>
+                            <a href="./locations.html">
+                                <li>Locations</li>
+                            </a>
+                            
+                            <a href="./report.html">
+                                <li>Report an Issue</li>
+                            </a>
+                        </ul>
+                    </nav>
+                    <img src="./img/bars-solid.svg" alt="menu bar" id="menu-bar">
+                    <br>
+                    <!-- <h1 class="title">LOCATION'S</h1> -->
+                </div>
+                <div class="report-box">
+                    <h2 class="report-name">Report an Issue</h2>
+                    <div class="report-text">
+                        <p>Questions, Comments, Concerns? Drop us a message here and let us know how we're doing.</p>
+                        <br>
+                        <p>We appreciate your business and want to make sure you are satisfied with your Car Wash. With
+                            5 self-service locations in
+                            the Denver-Metro area, malfunctions happen. Please let us know if you have experienced a
+                            problem and we will issue you a
+                            full refund.</p>
+                        <br>
+                        <p class="alert">*Credit and Debit cards may issue a $10 hold on your account until transaction
+                            is finalized at your bank.
+                            Please allow up to 72 hours for transactions to update. Contact your Bank should further
+                            issues arrive*</p>
+                    </div>
+                </div>
+                <div class="form-box">
+                    <div class="cash-form">
+                        <form action="form.php" method="POST" enctype="multipart/form-data" id="cash-refund">
+                            <h3 class="form-title">Cash Refund</h3>
+                            <label for="fname">Full Name</label>
+                            <input type="text" name="fname" placeholder="Name" required>
+                            <br>
+                            <label for="address">Address for Refund</label>
+                            <input type="text" name="line-1" placeholder="Line 1" required>
+                            <input type="text" name="line-2" placeholder="Line 2">
+                            <input type="text" name="city" placeholder="City" required>
+                            <input type="text" name="state" placeholder="State" required>
+                            <input type="text" name="zip" placeholder="Zip" required>
+                            <br>
+                            <label for="refund">Refund Amount</label>
+                            <input type="number" name="refund" required>
+                            <br>
+                            <label for="location">Car Wash Location</label>
+                            <select name="location" id="wash-location" required>
+                                <option value="kipling">Kipling</option>
+                                <option value="marshal">Marshal</option>
+                                <option value="lakeside">Lakeside</option>
+                                <option value="ralston">Ralston</option>
+                                <option value="44th">44th and Garrison</option>
+                            </select>
+                            <br>
+                            <label for="malfunction">Malfunction</label>
+                            <select name="malfunction" id="malfunction" required>
+                                <option value="Automatic Wash Malfunction">Automatic Wash Malfunction</option>
+                                <option value="Bay Wouldn't Start">Bay Wouldn't Start</option>
+                                <option value="Out of Service Changer">Out of Service Changer</option>
+                                <option value="Incorrect Change">Incorrect Change</option>
+                                <option value="Vending Jam">Vending Jam</option>
+                                <option value="Lack of Water Pressure">Lack of Water Pressure</option>
+                                <option value="No Soap">No Soap</option>
+                                <option value="Coin Jam">Coin Jam</option>
+                                <option value="Clogged Vaccuum">Clogged Vaccuum</option>
+                                <option value="Carwash Appearance">Carwash Appearance</option>
+                                <option value="Overcharged">Overcharged</option>
+                                <option value="Unsatisfied">Unsatisfied</option>
+                            </select>
+
+                        </form>
+                        <button type="submit" class="submit-btn" name="submit" form="cash-refund">Submit</button>
+                    </div>
+                    <div class="credit-form">
+                        <form action="form.php" method="POST" enctype="multipart/form-data" id="credit-refund">
+                            <h3 class="form-title">Credit Card Refund</h3>
+                            <label for="fname">Full Name</label>
+                            <input type="text" name="fname" placeholder="Name" required>
+                            <br>
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placeholder="Email" required>
+                            <br>
+                            <label for="card-num">Last Four Digits of CC/DC</label>
+                            <input type="number" name="card-num" required>
+                            <br>
+                            <label for="location">Car Wash Location</label>
+                            <select name="location" id="wash-location" required>
+                                <option value="kipling">Kipling</option>
+                                <option value="marshal">Marshal</option>
+                                <option value="lakeside">Lakeside</option>
+                                <option value="ralston">Ralston</option>
+                                <option value="44th">44th and Garrison</option>
+                            </select>
+                            <br>
+                            <label for="malfunction">Malfunction</label>
+                            <select name="malfunction" id="malfunction" required>
+                                <option value="Automatic Wash Malfunction">Automatic Wash Malfunction</option>
+                                <option value="Bay Wouldn't Start">Bay Wouldn't Start</option>
+                                <option value="Out of Service Changer">Out of Service Changer</option>
+                                <option value="Incorrect Change">Incorrect Change</option>
+                                <option value="Vending Jam">Vending Jam</option>
+                                <option value="Lack of Water Pressure">Lack of Water Pressure</option>
+                                <option value="No Soap">No Soap</option>
+                                <option value="Coin Jam">Coin Jam</option>
+                                <option value="Clogged Vaccuum">Clogged Vaccuum</option>
+                                <option value="Carwash Appearance">Carwash Appearance</option>
+                                <option value="Overcharged">Overcharged</option>
+                                <option value="Unsatisfied">Unsatisfied</option>
+                            </select>
+                        </form>
+                        <button type="submit" name="submit" class="submit-btn" form="credit-refund">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
